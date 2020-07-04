@@ -1,0 +1,83 @@
+<!-- pages/maintain/maintain.wxml -->
+<!-- <text>pages/maintain/maintain.wxml</text> -->
+<view class="container">
+    <form bindsubmit="formSubmit">
+        <!-- 房子信息 -->
+        <view class="house-name">
+            <view class="title">房屋信息</view>
+            <view class="house-info">
+                <view class="mark">*</view>
+                <view class="infomation">房屋信息</view>
+                <view class="picker">
+                    <picker mode="selector" range="{{houseNameArr}}" value="{{item}}" bindchange="onHouseChange">
+                        <view>{{changedHouse ? houseNameArr[curIndexHouse] : '请选择房屋'}}</view>
+                    </picker>
+                </view>
+            </view>
+        </view>
+        <!-- 报修信息 -->
+        <view class="repair-box">
+            <view class="title">报修信息</view>
+            <!-- 报修类型 报修人姓名 手机 报修内容 -->
+            <view class="repair-info">
+                <!-- 报修类型 -->
+                <view class="repair-type">
+                    <view class="mark">*</view>
+                    <view class="type">报修类型</view>
+                    <view class="picker">
+                        <picker mode="selector" range="{{repairTypeArr}}" value="{{item}}" bindchange="onTypeChange">
+                            <view>{{changedType ? repairTypeArr[curIndexType] : '请选择报修类型'}}</view>
+                        </picker>
+                    </view>
+                </view>
+                <!-- 报修人姓名 -->
+                <view class="repair-name">
+                    <view class="mark">*</view>
+                    <view class="name">报修人</view>
+                    <view class="inp">
+                        <input name="nameVal" type="text" placeholder="请输入报修人姓名" value="{{form.nameVal}}"/>
+                    </view>
+                </view>
+                <!-- 报修人联系方式 -->
+                <view class="repair-tel">
+                    <view class="mark">*</view>
+                    <view class="tel">联系方式</view>
+                    <view class="inp">
+                        <input name="telVal" type="text" placeholder="请输入手机号" value="{{form.telVal}}"/>
+                    </view>
+                </view>
+                <!-- 报修内容 -->
+                <view class="repair-content">
+                    <view class="mark">*</view>
+                    <view class="content">报修内容</view>
+                    <view class="inp">
+                        <input name="content" type="text" placeholder="请输入报修内容" value="{{form.content}}"/>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 相关图片 -->
+        <view class='up-pic'>
+            <text class="addPic">相关图片</text>
+            <view class='flex pic-box'>
+                <block wx:key="imgbox" wx:for="{{imgbox}}">
+                    <view class='ap-box'>
+                        <view class='add-pic'>
+                            <image class='add-pic' src='{{item}}'></image>
+                            <view class='img-de' data-deindex='{{index}}' bindtap='imgDelete'>
+                                <image class='img-del' src='../../images/del.png'></image>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                <view class='add-pic' bindtap='addPic' wx:if="{{imgbox.length<6}}">
+                    <image class='img-add' src='../../images/add.png'></image>
+                </view>
+            </view>
+        </view>
+        <!-- 提交按钮 -->
+        <view class="btn-area">
+            <button formType="submit">提交</button>
+        </view>
+    </form>
+</view>

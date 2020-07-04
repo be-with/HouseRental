@@ -1,0 +1,20 @@
+/* pages/houseHistory/houseHistory.wxss */
+
+
+.container .history{
+    font-size: 26rpx;
+    margin-left: 40rpx;
+    margin-top: 20rpx;
+    color: rgb(180, 180, 180);
+  }
+.container .tag-box .tag{
+    display: inline-block;
+    margin-left: 25rpx;
+    margin-right: 10rpx;
+    margin-top: 15rpx;
+    font-size: 24rpx;
+    padding: 10rpx;
+    color: rgb(96, 97, 97);
+    background-color: rgb(240, 240, 240);
+    border-radius: 5rpx;
+  }

@@ -1,0 +1,22 @@
+<!--components/moreMenu/menu.wxml-->
+<!-- <text>components/moreMenu/menu.wxml</text> -->
+
+
+
+<view class="menu">
+        <view class="menu-item" 
+                wx:for="{{menuArr}}" 
+                wx:key="item" 
+                bind:tap="onTap"
+                data-type="{{item.type}}">
+            <view class="items">
+                <text class="iconfont {{item.icon}}"></text>
+                <text class="text">{{item.name}}</text>
+            </view>    
+            <view class="arrow">
+                <text class="iconfont icon-arrow"></text>
+            </view>
+                
+            
+        </view>
+    </view>

@@ -1,0 +1,50 @@
+/* pages/houseSearch/houseSearch.wxss */
+
+ .container{
+    width: 100%;
+ }
+ /* 搜索框 */
+ .container .search-box{
+  width: 700rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.search{
+  display: inline-block;
+  width: 600rpx;
+  height: 80rpx;
+  padding-left: 20rpx;
+  background-color: #f3f3f3;
+  font-size: 28rpx;
+}
+.text{
+  font-size: 28rpx;
+  display: inline-block;
+}
+
+/* 搜索历史记录 */
+.search-history .record{
+  font-size: 26rpx;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+  color: rgb(180, 180, 180);
+}
+.search-history .tag{
+  display: inline-block;
+  margin-left: 25rpx;
+  margin-right: 10rpx;
+  margin-top: 5rpx;
+  font-size: 24rpx;
+  padding: 10rpx;
+  color: rgb(96, 97, 97);
+  background-color: rgb(240, 240, 240);
+  border-radius: 5rpx;
+}
+
+.no-house{
+  font-size: 28rpx;
+  color: #686565;
+  margin-left: 25rpx;
+}

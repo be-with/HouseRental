@@ -1,0 +1,37 @@
+<!-- pages/person/person.wxml -->
+<!-- <text>pages/person/person.wxml</text> -->
+<view class="container">
+    <view class="user-info" wx:if="{{aType == '管理员'}}">
+        <view class="avatar">
+            <image wx:if="{{authorized}}" src="{{userInfo.avatarUrl}}" />
+            <button wx:else open-type="getUserInfo" class="get-user-info" bindgetuserinfo="onGetUserInfo" bindgetphonenumber="onGetPhoneNumber" size="mini">
+                <image src="../../images/login.png" />
+            </button> 
+        </view>
+        <view class="user-name">{{userInfo.nickName}}</view>
+        <view class="tag">用户</view>
+        <view class="tag" hidden="{{u_authority == 1}}">业主</view>
+    </view>
+
+    <!-- 用户界面 -->
+    <h-menu menu-arr="{{userArr}}" authority="{{u_authority}}" wx:if="{{oType == '业主' && aType == '管理员'}}" catch:toggle="isNavigateToID" uAuthority="{{u_authority}}"></h-menu>
+    
+    <!-- 业主界面 -->
+    <h-menu menu-arr="{{ownerArr}}"  wx:if="{{oType == '用户' && aType == '管理员'}}" ></h-menu>
+    
+    
+    <!-- 管理员界面 -->
+    <!-- <view wx:if="{{aType == '用户'}}">
+    <modal hidden="{{hiddenmodalput}}" title="请输入管理员密码" confirm-text="提交" cancel-text="重置" bindcancel="cancel" bindconfirm="confirm">
+        <input type='text' placeholder="请输入内容" auto-focus />
+    </modal>
+    <scroll-view class="wrapper">
+    <text class="type">已出租</text>
+    <text class="type">未出租</text>
+    </scroll-view>
+    </view> -->
+    
+    <!-- 切换按钮 -->
+    <button class="convert-btn" bind:tap="toggleOwnerUser" disabled="{{aType == '用户' ? true : false}}">切换为{{oType}}</button>
+    <!-- <button class="convert-btn" bind:tap="toggleAdminUser">切换为{{aType}}</button> -->
+</view>

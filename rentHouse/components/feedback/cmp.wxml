@@ -1,0 +1,27 @@
+<!-- components/feedback/cmp.wxml -->
+<!-- <text>components/feedback/cmp.wxml</text> -->
+<!-- 用户反馈 -->
+<view class='feedback'>
+    <form bindsubmit="onSubmitTap">
+        <view class='feedback-info'>
+            <view class='content'>
+                <textarea name="content" clss='textarea-content' placeholder='请详细描述您的问题/建议' 
+                    maxlength="{{max}}" placeholder-style="font-size:28rpx;color:#ced6e0" bindinput="onContentInput"
+                    value="{{form.content}}"></textarea>
+                <view class="indicator">{{currentWordNumber}}/{{max}}</view>    
+            </view>
+            <view class='text-input'>
+                <text>姓名：</text>
+                <input name="uname" class='feedback-input' placeholder='请填写' type='text' value="{{form.uname}}"></input>
+            </view>
+            <view class='text-input'>
+                <text>手机号：</text>
+                <input name="tel" class='feedback-input' placeholder='请填写' type='number' value="{{form.tel}}"></input>
+            </view>
+            <text class='tip'>请留下您的联系方式，方便我们更好的与您沟通问题，紧急问题可拨打客服电话0595-8642222</text>
+        </view>
+        <view class='submit-suggest' >
+            <button formType="submit">提交建议</button>
+        </view>
+    </form>
+</view>

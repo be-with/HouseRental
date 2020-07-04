@@ -1,0 +1,39 @@
+<!-- pages/order/order.wxml -->
+<!-- <text>pages/order/order.wxml</text> -->
+<view class="container">
+    <h-nav type-arr="{{orderMenu}}" catch:order="order"></h-nav>
+
+    <!-- 订单 -->
+    <swiper current="{{currentIndex}}" class="swiper-box" duration="300" style="height:{{winHeight+145}}rpx">
+        <!-- 订单 -->
+        <swiper-item>
+            <scroll-view>
+                <h-order renting="renting" rented="rented" order-arr="{{ordersUid}}" catch:pay="onPayTap"></h-order>
+            </scroll-view>
+        </swiper-item>
+        <!-- 租借中 -->
+        <swiper-item>
+            <scroll-view>
+                <h-order all="all" rented="rented" order-arr="{{ordersRenting}}"></h-order>
+            </scroll-view>
+        </swiper-item>
+        <!-- 租借完毕 -->
+        <swiper-item>
+            <scroll-view>
+                <h-order order-arr="{{orderRented}}" all="all" renting="renting"></h-order>
+            </scroll-view>
+        </swiper-item>
+        <!-- 已付款 -->
+        <swiper-item>
+            <scroll-view>
+                <h-order order-arr="{{ordersPayed}}" renting="renting" rented="rented"></h-order>
+            </scroll-view>
+        </swiper-item>
+        <!-- 待付款 -->
+        <swiper-item>
+            <scroll-view>
+                <h-order order-arr="{{ordersNoPay}}" renting="renting" rented="rented" catch:pay="onPayTap"></h-order>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

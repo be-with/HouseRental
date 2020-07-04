@@ -1,0 +1,12 @@
+<!--pages/houseHistory/houseHistory.wxml-->
+<!-- <text>pages/houseHistory/houseHistory.wxml</text> -->
+
+<view class="container">
+    <view class="history">搜索历史</view>
+    <view class="tag-box">
+        <view class="tag" 
+            wx:for="{{searchwordList}}" 
+            wx:key="index"
+            catch:tap="onTap" data-searchword="{{item}}">{{item}}</view>
+    </view>
+</view>

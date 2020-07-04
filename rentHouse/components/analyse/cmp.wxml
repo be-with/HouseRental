@@ -1,0 +1,16 @@
+<!-- components/analyse/cmp.wxml -->
+<!-- <text>components/analyse/cmp.wxml</text> -->
+
+
+<view class="container">
+    <view class="title-content">
+        <view class="title">
+            <view class="title-left">FORMAT ANALYSIS</view>
+        </view>
+        <view class="line"></view>
+        <view class="content" wx:for="{{analyse}}" wx:key="index">
+                <view class="content-title">{{item.title}}</view>
+                <view class="context">{{item.content}}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,25 @@
+<!-- pages/houseSearch/houseSearch.wxml -->
+<!-- <text>pages/houseSearch/houseSearch.wxml</text> -->
+<view class="container">
+    <view class="search-box">
+        <input class="search" 
+                type="text" 
+                placeholder="位置/公寓名称/城市" 
+                value="{{value}}"
+                bindblur="onBlur"></input>
+        <!-- <text class="text" bind:tap="onSearch">搜索</text> -->
+        <text class="text">搜索</text>
+    </view>
+    <!-- 历史记录 -->
+    <view class="search-history" hidden="{{!isShowTag}}">
+        <view class="record">搜索记录</view>
+        <view class="tag" 
+            wx:for="{{searchwordList}}" 
+            wx:key="index" 
+            data-tag="{{item}}" 
+            catch:tap="onTap">{{item}}</view>  
+    </view>
+    <!-- 搜索结果 -->
+    <h-houseInfo recommend-arr="{{houseArr}}" img="{{img}}" catch:sign="onSignTap"></h-houseInfo>
+    <view class="no-house" wx:if="{{noHouse}}">抱歉~ 没有搜索到房源</view>
+</view>

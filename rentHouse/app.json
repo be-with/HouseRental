@@ -1,0 +1,87 @@
+{
+  "pages": [
+    "pages/houseRecommendation/houseRecommendation",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/houseSearch/houseSearch",
+    "pages/order/order",
+    "pages/more/more",
+    "pages/person/person",
+    "pages/searchHistory/searchHistory",
+    "pages/rent/rent",
+    "pages/maintain/maintain",
+    "pages/record/record",
+    "pages/remind/remind",
+    "pages/calendar/calendar",
+    "pages/rerent/rerent",
+    "pages/nearby/nearby",
+    "pages/signing/signing",
+    "pages/onlineSign/onlineSign",
+    "pages/reserve/reserve",
+    "pages/publish/publish",
+    "pages/identity/identity",
+    "pages/pay/pay",
+    "pages/payMoney/payMoney",
+    "pages/application/application",
+    "pages/route/route",
+    "pages/rerentAppli/rerentAppli",
+    "pages/adjust/adjust",
+    "pages/myHouses/myHouses",
+    "pages/houseManage/houseManage",
+    "pages/repairMessage/repairMessage",
+    "pages/detailRepair/detailRepair",
+    "pages/czOperate/czOperate"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "E家",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#41ADBD",
+    "list": [
+      {
+        "pagePath": "pages/houseRecommendation/houseRecommendation",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-ac.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "images/list.png",
+        "selectedIconPath": "images/list-ac.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "更多",
+        "iconPath": "images/more.png",
+        "selectedIconPath": "images/more-ac.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人中心",
+        "iconPath": "images/person.png",
+        "selectedIconPath": "images/person-ac.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "plugins": {
+    "calender": {
+      "version": "1.0.1",
+      "provider": "wx42b95b4509175304"
+    },
+    "ocr-plugin": {
+      "version": "3.0.1",
+      "provider": "wx4418e3e031e551be"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<!-- components/threeImg/cmp.wxml -->
+<!-- <text>components/threeImg/cmp.wxml</text> -->
+<view class="container">
+    <view class="img-container">
+        <image class="image" wx:for="{{imgArr}}" wx:if="{{index < 2}}" src="{{item}}" wx:key="*this" catch:tap="onTap" data-index="{{index}}" />
+        <text class="img-num" wx:if="{{imgArr.length > 2}}">{{imgArr.length - 2}}</text>
+    </view>
+</view>

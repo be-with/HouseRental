@@ -1,0 +1,96 @@
+/* pages/houseManage/houseManage.wxss */
+
+.container{
+    /* background-color: red; */
+    margin-top: 25rpx;
+}
+
+.container .publish,
+.container .delete{
+    background-color: #47abcd;
+    color: #fff;
+    padding: 20rpx;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+/* 删除房源 */
+.container .check-box .all{
+    margin-left: 20rpx;
+    margin-top: 15rpx;
+}
+.container .check-box .item-box{
+    margin-top: 15rpx;
+}
+
+.container .check-box .item-box .item{
+    /* width: 300rpx; */
+    margin-left: 8rpx;
+    display: inline-block;
+    margin-top: 15rpx;
+    /* background-color: red; */
+}
+
+.container .check-box .item-box .single{
+    position: relative;
+    top: -47rpx;
+    left: 5rpx;
+    /* width: 300rpx; */
+    margin-left: 8rpx;
+    /* display: inline-block; */
+    /* background-color: blue; */
+    
+}
+.container .check-box .item-box .item .img-box{
+    display: inline-block;
+    width: 200rpx;
+    height: 120rpx;
+    margin-top: 15rpx;
+    margin-left: 15rpx;
+    border-radius: 10rpx;
+    /* background-color: red; */
+}
+.container .check-box .item-box .item .img-box image{
+    width: 200rpx;
+    height: 120rpx;
+    border-radius: 10rpx;
+}
+.container .check-box .item-box .item .house-info{
+    /* background-color: blue; */
+    display: inline-block;
+    width: 450rpx;
+    vertical-align: top;
+    margin-top: 26rpx;
+}
+.container .check-box .item-box .item .house-info .type,
+.container .check-box .item-box .item .house-info .title-adjust{
+    display: flex;
+}
+.container .check-box .item-box .item .house-info .title-adjust{
+    width: 500rpx;
+    /* background-color: red; */
+    margin-left: 10rpx;
+    justify-content: space-between;
+}
+.container .check-box .item-box .item .house-info .title-adjust .adjust{
+    border: 1px solid #47adbd;
+    padding: 5rpx;
+    border-radius: 10rpx;
+    font-size: 28rpx;
+    color: #47adb4;
+    margin-right: 17rpx;
+} 
+.container .check-box .item-box .item .house-info .type{
+    font-size: 28rpx;
+    color: #bbbaba;
+    margin-top: 15rpx;
+    margin-left: 10rpx;
+}
+.container .check-box .item-box .item .house-info .type .house-type{
+    margin-right: 10rpx;
+}
+.container .check-box .confirm{
+    background-color: #41abdb;
+    margin-top: 25rpx;
+    margin-bottom: 15rpx;
+    color: #fff;
+}

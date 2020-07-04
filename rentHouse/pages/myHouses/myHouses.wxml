@@ -1,0 +1,19 @@
+<!-- pages/myHouses/myHouses.wxml -->
+<!-- <text>pages/myHouses/myHouses.wxml</text> -->
+<view class="container">
+    <view class="item" wx:for="{{houseArr}}" wx:key="index">
+        <view class="img-box">
+            <image src="{{imgList[index][0]}}" />
+        </view>
+        <view class="house-info">
+            <view class="title-adjust">
+                <view class="title">{{item.title}}</view>
+                <view class="adjust" data-item="{{item}}" catch:tap="onAdjustTap" >修改租金</view>
+            </view>
+            <view class="type">
+                <view class="house-type">{{item.type}}</view>
+                <view class="rent-type">{{item.rtype}}</view>
+            </view>
+        </view>
+    </view>
+</view>

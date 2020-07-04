@@ -1,0 +1,23 @@
+<!-- pages/more/more.wxml -->
+<!-- <text>pages/more/more.wxml</text> -->
+
+<view class="container">
+    <!-- tab -->
+    <h-nav class="nav" catch:nav="onNav" type-arr="{{moreTypeArr}}"></h-nav>
+
+    <!-- 内容区域 -->
+    <view class="content">
+        <view class="policy" hidden="{{currentIndex != 0}}">
+            <h-policy />
+        </view>
+        <view class="analyse" hidden="{{currentIndex != 1}}">
+            <h-analyse />
+        </view>
+        <view class="analyse" hidden="{{currentIndex != 2}}">
+            <h-help />
+        </view>
+        <view class="analyse" hidden="{{currentIndex != 3}}">
+            <h-feedback />
+        </view>
+    </view>
+</view>

@@ -1,0 +1,48 @@
+/* pages/repairMessage/repairMessage.wxss */
+
+.container .item .img-box{
+    display: inline-block;
+    width: 200rpx;
+    height: 120rpx;
+    margin-top: 15rpx;
+    margin-left: 15rpx;
+    border-radius: 10rpx;
+    /* background-color: red; */
+}
+.container .item .img-box image{
+    width: 200rpx;
+    height: 120rpx;
+    border-radius: 10rpx;
+}
+.container .item .house-info{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 26rpx;
+}
+.container .item .house-info .type,
+.container .item .house-info .title-adjust{
+    display: flex;
+}
+.container .item .house-info .title-adjust{
+    width: 500rpx;
+    /* background-color: red; */
+    margin-left: 10rpx;
+    justify-content: space-between;
+}
+.container .item .house-info .title-adjust .adjust{
+    border: 1px solid #47adbd;
+    padding: 5rpx;
+    border-radius: 10rpx;
+    font-size: 28rpx;
+    color: #47adb4;
+    margin-right: 17rpx;
+} 
+.container .item .house-info .type{
+    font-size: 28rpx;
+    color: #bbbaba;
+    margin-top: 15rpx;
+    margin-left: 10rpx;
+}
+.container .item .house-info .type .house-type{
+    margin-right: 10rpx;
+}

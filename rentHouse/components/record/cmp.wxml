@@ -1,0 +1,24 @@
+<!--components/record/cmp.wxml-->
+<!-- <text>components/record/cmp.wxml</text> -->
+
+<view class="container">
+    <view class="item" wx:for="{{orderArr}}" wx:key="index">
+        <view class="img-box">
+            <image src="{{item.img}}" />
+        </view>
+        <view class="order-info">
+            <view class="title-paystatus">
+                <view class="title">{{item.house_name}}</view>
+                <view class="{{all}}">
+                    <view class="pay-status">{{item.ispay == 0?'待付款':'已付款'}}</view>
+                </view>
+            </view>
+            <view class="date">{{item.checkin_date}} - {{item.quit_date}}</view>
+            <view class="nights-price">
+                <view class="nights">{{item.nights}}晚</view>
+                <view class="price">总价：￥{{item.total_price}}</view>
+                <view class="do" wx:if="{{item.ispay == 0}}" catch:tap="onTap" data-item="{{item}}">去付款</view>
+            </view>
+        </view>
+    </view>
+</view>

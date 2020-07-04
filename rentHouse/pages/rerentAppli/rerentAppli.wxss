@@ -1,0 +1,324 @@
+/* pages/rerentAppli/rerentAppli.wxss */
+
+page{
+    background-color: #f3f3f3;
+}
+.container{
+    overflow-x: hidden;
+}
+.container .house-info{
+    background-color: #fff;
+    width: 100%;
+    margin-top: 15rpx;
+    padding-bottom: 10rpx;
+    height: 200rpx;
+    line-height: 55rpx;
+    /* background-color: red; */
+}
+.house-info .detailed{
+    display: flex;
+    justify-content: space-between;
+}
+.house-info .detailed .house-name{
+    width: 65%;
+    font-size: 30rpx;
+    font-weight: 600;
+    padding: 10rpx;
+    margin-left: 5rpx;
+}
+.house-info .detailed .agreement{
+    display: flex;
+    font-size: 28rpx;
+    color: #0a7ec7;
+    padding: 10rpx;
+    margin-right: 5rpx;
+}
+.house-info .detailed .agreement .mark{
+    width: 30rpx;
+    height: 30rpx;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 51rpx;
+    /* margin-left: 8rpx;
+    margin-top: 2rpx; */
+}
+.house-info .date-time{
+    width: 95%;
+    margin-top: 10rpx;
+    display: flex;
+    justify-content: space-around;
+}
+.house-info .date-time .checkInAndOut{
+    font-size: 38rpx;
+    font-weight: 600;
+}
+.house-info .date-time .nights{
+    font-size: 28rpx;
+    margin-top: 8rpx;
+}
+/* 协议条文内容 */
+.house-info .agreeContent{
+    width: 100%;
+    /* height: 53%; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0px -2px 5px #ccc;
+    overflow: hidden;
+    z-index: 1000;
+    color: #000;
+    border-top-left-radius: 30rpx;
+    border-top-right-radius: 30rpx;
+    transition: 2s;
+}
+.house-info .agreeContent .refund,
+.house-info .agreeContent .explain,
+.house-info .agreeContent .rule,
+.house-info .agreeContent .form{
+    padding: 10rpx;
+}
+.house-info .agreeContent .title{
+    font-size: 36rpx;
+    font-weight: 600;
+    margin-left: 8rpx;
+}
+.house-info .agreeContent .content{
+    font-size: 26rpx;
+    color: #9b9090;
+    margin-top: 5rpx;
+    padding: 5rpx;
+    line-height: 41rpx;
+}
+.house-info .agreeContent .icon{
+    display: inline-block;
+    width: 5rpx;
+    height: 5rpx;
+    border: 1px solid #9b9090;
+    border-radius: 50%;
+    background-color: #9b9090;
+    vertical-align: 7rpx;
+}
+.house-info .agreeContent .close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+.house-info .agreeContent .close image{
+    width: 40rpx;
+    height: 40rpx;
+}
+
+/* 订单信息 */
+.order-info{
+    background-color: #fff;
+    margin-top: 25rpx;
+}
+.order-info .line{
+    width: 95%;
+    height: 2rpx;
+    background-color: #c3c3c3;
+    margin: 15rpx auto;   
+}
+.order-info .person-num{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10rpx;
+}
+.order-info .person-num view{
+    margin-left: 25rpx;
+    margin-right: 25rpx;
+    font-size: 34rpx;
+    padding: 10rpx;
+}
+.order-info .name-box .warn-box,
+.order-info .tel-box .warn-box{
+    display: flex;
+    margin-top: 15rpx;
+}
+.order-info .name-box .warn-box image,
+.order-info .tel-box .warn-box image{
+    width: 30rpx;
+    height: 30rpx;
+    margin-left: 28rpx;
+    margin-top: 5rpx;
+}
+.order-info .name-box .warn-box .warning,
+.order-info .tel-box .warn-box .warning{
+    font-size: 28rpx;
+    color: red;
+    margin-left: 10rpx;
+}
+.order-info .name-box .person-name,
+.order-info .person-tel{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25rpx;
+    margin-right: 25rpx;
+    font-size: 34rpx;
+    padding: 10rpx;
+}
+.order-info .person-name input,
+.order-info .person-tel input{
+    width: 50%;
+}
+.order-info .person-tel{
+    padding-bottom: 30rpx;
+}
+/* 身份证认证样式 */
+.ID{
+    background-color: #fff;
+    margin-top: 25rpx;
+}
+.ID .ID-title{
+    margin-left: 37rpx;
+    font-size: 34rpx;
+}
+.ID .ID-content{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15rpx;
+    padding-bottom: 10rpx;
+}
+.ID .ID-image{
+    width: 260rpx;
+    height: 230rpx;
+}
+.ID .ID-image image{
+    width: 100%;   
+}
+.ID .ID-image text{
+    font-size: 30rpx;
+    margin-top: 5rpx; 
+    text-align: center;
+    margin-left: 34rpx;  
+}
+/* 押金说明样式 */
+.deposit{
+    width: 100%;
+    height: 150rpx;
+    background-color: #fff;
+    margin-top: 25rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.deposit .title{
+    font-size: 36rpx;
+    margin-right: 20rpx;
+    margin-left: 37rpx;
+}
+.deposit .content{
+    font-size: 28rpx;
+    margin-right: 60rpx;
+    padding: 5rpx;
+}
+/* tips */
+.tips{
+    color: rgb(98, 95, 95);
+    margin-top: 25rpx;
+    background-color: #f3f2f2;
+    height: 700rpx;
+}
+.tips .refund,
+.tips .reorder,
+.tips .use,
+.tips .form{
+    font-size: 28rpx;
+    margin-top: 20rpx;
+}
+.tips .content{
+    font-size: 26rpx;
+}
+/* 价格 提交订单 */
+.confirm{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30rpx;
+    background-color: #fff;
+    height: 100rpx;
+    bottom: 0;
+}
+.confirm .computed-price{
+    color:rgb(7,150,172);
+    font-size: 40rpx;
+    font-weight: 600;
+    margin-left: 120rpx;
+    line-height: 96rpx;
+}
+.confirm .detailed{
+    line-height: 98rpx;
+    color: rgb(98, 95, 95);
+    font-size: 22rpx;
+}
+.confirm .submit-order{
+    width: 40%;
+    background-color: #41adbd;
+    text-align: center;
+    line-height: 69rpx;
+    transform: translateX(16rpx);
+    color: #fff;
+    font-size: 30rpx;
+}
+.detail-box{
+    width: 100%;
+    position: fixed;
+    bottom: 100rpx;
+    left: 0;
+    background: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 1000;
+    color: #000;
+    transition: 2s;
+    margin-top: 10rpx;
+}
+.detail-box .title{
+    margin-left: 15rpx;
+    margin-bottom: 20rpx;
+    font-size: 28rpx;
+}
+.detail-box .price,
+.detail-box .detail-price{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15rpx;
+    margin-right: 15rpx;
+    font-size: 28rpx;
+}
+.detail-box .detail-price{
+    font-size: 26rpx;
+    color: rgb(98, 95, 95);
+    margin-bottom: 10rpx;
+}
+
+/* 确认支付 */
+.pay{
+    position: fixed;
+    top: 50%;
+    left: 7%;
+    width: 85%;
+    height: 450rpx;
+    margin-top: -225rpx;
+    background-color: #fff;
+    z-index: 999;
+    border-radius: 15rpx;
+}
+.pay .close{
+    margin-top: 10rpx;
+    margin-left: 25rpx;
+    font-size: 46rpx;
+    color: #ccc;
+}
+.pay .money{
+    text-align: center;
+    margin-top: 70rpx;
+    font-size: 48rpx;
+    font-weight: 600;
+}
+.pay .confirm-btn{
+    margin-top: 80rpx;
+}

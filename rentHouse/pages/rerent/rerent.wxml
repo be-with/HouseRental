@@ -1,0 +1,7 @@
+<!--pages/rerent/rerent.wxml-->
+<!-- <text>pages/rerent/rerent.wxml</text> -->
+
+
+<view class="container">
+    <h-rent order-arr="{{orderArr}}" catch:agree="onAgreeTap" catch:disagree="onDisagreeTap"></h-rent>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/record/record.wxml-->
+<!-- <text>pages/record/record.wxml</text> -->
+
+<view class="container">
+    <h-record order-arr="{{orderArr}}"></h-record>
+</view>

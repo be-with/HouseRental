@@ -1,0 +1,64 @@
+<!-- pages/houseRecommendation/houseRecommendation.wxml -->
+<!-- <text>pages/houseRecommendation/houseRecommendation.wxml</text> -->
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search">
+    <view class="select-addr">
+      <!-- <picker mode="region" bindchange="changeArea"> -->
+        <text class="addr">{{city}}</text>
+      <!-- </picker> -->
+      <image src="../../images/tri-arrow.png" />
+    </view>
+    <h-search class="search-inp" value="{{searchword}}"></h-search>
+  </view>
+  <!-- 房源推荐 -->
+  <view class="recommendation">
+    <!-- 轮播图部分 -->
+    <swiper class="swiper" duration="{{duration}}" indicator-dots="{{indicatorDots}}" autoplay="{{true}}" indicator-active-color="#ffffff">
+      <block wx:for="{{swiperImg}}" wx:key='index'>
+        <swiper-item class="banner">
+          <image src="{{item}}" class="slide-image" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 导航栏 -->
+    <view class="navBar">
+      <!-- 附近房源 -->
+      <view class="nearHouse" catch:tap="onTapNear">
+        <image src="../../images/fujin.png" />
+        <text>附近房源</text>
+      </view>
+      <!-- 联系方式 -->
+      <view class="contact" catch:tap="onTapContact">
+        <image src="../../images/tel.png" />
+        <text>联系方式</text>
+      </view>
+    </view>
+    <!-- 房源推荐部分 -->
+    <view class="recommend-house">
+      <!-- 推荐房源 文字部分-->
+      <view class="recommend-tip">
+        <text class="recommend-text1">推荐房源</text>
+        <text class="recommend-text2">最优质的的房源都在这里~</text>
+      </view>
+      <!-- 地址 房屋类型(户型) 租住类型(方式) -->
+      <view class="recommend-menu">
+        <picker mode="region" class="menu" bindchange="changeArea">
+          <text>{{selectCity ? city:'区域'}}</text>
+        </picker>
+        <picker class='menu reorder' bindchange="changeApartment" value="{{indexApa}}" range="{{apartmentArr}}">
+          <text class="picker1" wx:if="{{!selectApa}}">户型</text>
+          <text class="picker1" wx:else>{{apartmentArr[indexApa]}}</text>
+        </picker>
+        <picker class='menu sort' bindchange="changeWay" value="{{indexWay}}" range="{{wayArr}}">
+          <text class="picker1" wx:if="{{!selectWay}}">租住类型</text>
+          <text class="picker1" wx:else>{{wayArr[indexWay]}}</text>
+        </picker>
+      </view>
+      <!-- 房源信息 -->
+      <h-houseInfo recommend-arr="{{recommendArr}}" img="{{img}}" catch:sign="onSign"></h-houseInfo>
+
+
+    </view>
+  </view>
+</view>

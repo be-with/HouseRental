@@ -1,0 +1,12 @@
+<!--components/nav/cmp.wxml-->
+<!-- <text>components/nav/cmp.wxml</text> -->
+
+
+<scroll-view class="container" scroll-x="{{true}}" scroll-into-view="{{activeId}}" scroll-with-animation="{{true}}">
+    <view  wx:for="{{typeArr}}"
+    class="type {{selectedIndex == index ? 'active' : ''}}" 
+    wx:key="index"
+    bind:tap="onTap"
+    data-index="index"
+    id="{{'house' + index}}">{{item}}</view>
+</scroll-view>

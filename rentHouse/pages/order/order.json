@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "h-nav": "/components/nav/cmp",
+    "h-order": "/components/order/cmp"
+  }
+}

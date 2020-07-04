@@ -1,0 +1,25 @@
+<!-- components/recommend/cmp.wxml -->
+<!-- <text>components/recommend/cmp.wxml</text> -->
+<view class="container">
+    <view class="house-box" wx:for="{{recommendArr}}" wx:key="index" catch:tap="onTapSign" 
+            data-index="{{item.id - 1}}" 
+            data-city="{{item.city}}" 
+            data-title="{{item.title}}" 
+            data-address="{{item.address}}"
+            data-startdate="{{item.start_date}}"
+            data-enddate="{{item.end_date}}">
+        <image src="{{img[index][0]}}" />
+        <!-- 价格 详细地址 联系方式 看房预约 线上签约 -->
+        <view class="house-info">
+            <view class="title">{{item.city + item.address + item.title}}</view>
+            <view class="price-apply">
+                <view class="price">￥{{item.price}}/{{item.rtype}}</view>
+                <view class="apply-signing">
+                    <view class="apply">看房预约</view>
+                    <view class="signing">线上签约</view>
+                </view>
+            </view>
+            <view class="contact">中介联系方式：{{item.u_tel}}</view>
+        </view>
+    </view>
+</view>

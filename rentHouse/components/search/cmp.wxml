@@ -1,0 +1,13 @@
+<!--components/search/cmp.wxml-->
+<!--<text>components/search/cmp.wxml</text>-->
+
+
+<view class="container">
+    <!-- 小程序的input默认啥都没有 要自己写样式 -->
+    <input class="search" type="text"
+            placeholder="位置/公寓名称/城市"
+            value="{{value}}"
+            bind:tap="onSearch"
+            disabled="{{true}}"></input>
+    <!-- <text class="text" bind:tap="onSearch">搜索</text> -->
+</view>

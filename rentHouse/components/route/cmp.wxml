@@ -1,0 +1,18 @@
+<!-- components/route/cmp.wxml -->
+<!-- <text>components/route/cmp.wxml</text> -->
+<view class="container">
+    <view class="item" wx:for="{{applicationArr}}" wx:key="index" wx:if="{{applicationFlag}}">
+        <view class="house-info">
+            <view class="title">{{item.house_name}}</view>
+            <view class="city-address">
+                <view class="city">{{item.city}}</view>
+                <view class="address">{{item.address}}</view>
+            </view>
+        </view>
+        <view class="visit-time">
+            <view class="visit">您预约的看房时间是：</view>
+            <view class="time">{{item.visit_time}}</view>
+        </view>
+    </view>
+    <view wx:if="{{!applicationFlag}}">您暂时还没有看房行程~</view>
+</view>

@@ -1,0 +1,56 @@
+<!-- pages/czOperate/czOperate.wxml -->
+<!-- <text>pages/czOperate/czOperate.wxml</text> -->
+<view class="container">
+    <h-nav class="nav" type-arr="{{typeMenu}}" catch:order="order"></h-nav>
+    <view class="infomation">
+        <swiper current="{{currentIndex}}" class="swiper-box" duration="300" style="height:{{winHeight+145}}rpx;background-color:#fff">
+            <!-- 日租 -->
+            <swiper-item>
+                <scroll-view scroll-y="true" style="height:1120rpx">
+                    <view class="" wx:for="{{houseNameArr}}" wx:key="*this" wx:for-item="hname">
+                        <view class="title" catch:tap="onHousenameTap" data-names="{{hname}}" data-index="{{index}}">
+                            {{hname}}
+                        </view>
+                        <view class="order-box" wx:for="{{orderArr}}" wx:if="{{item.house_name == hname}}" wx:key="index">
+                            <!-- 租客姓名 身份证号 起止日期 付款状态 -->
+                            <view class="person-info">
+                                <view class="person-name">姓名：{{item.person_name}}</view>
+                                <view class="ID">身份证：{{item.IDNum}}</view>
+                            </view>
+                            <view class="date-ispay">
+                                <view class="date">
+                                    起止日期：{{item.checkin_date}}-{{item.rerent_date == null ? item.quit_date:item.rerent_date}}
+                                </view>
+                                <view class="rerent" wx:if="{{item.rerent_date != null}}">续租</view>
+                                <view class="ispay">{{item.ispay == 1 ? '已付款' : '未付款'}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+            <!-- 短租 -->
+            <swiper-item>
+                <scroll-view scroll-y="true" style="height:1120rpx">
+                    <view class="" wx:for="{{houseNameArr}}" wx:key="*this" wx:for-item="hname">
+                        <view class="title" catch:tap="onHousenameTap" data-names="{{hname}}" data-index="{{index}}">
+                            {{hname}}
+                        </view>
+                        <view class="order-box" wx:for="{{orderArr}}" wx:if="{{item.house_name == hname}}" wx:key="index">
+                            <!-- 租客姓名 身份证号 起止日期 付款状态 -->
+                            <view class="person-info">
+                                <view class="person-name">姓名：{{item.person_name}}</view>
+                                <view class="ID">身份证：{{item.IDNum}}</view>
+                            </view>
+                            <view class="date-ispay">
+                                <view class="date">
+                                    起止日期：{{item.checkin_date}}-{{item.rerent_date == null ? item.quit_date:item.rerent_date}}
+                                </view>
+                                <view class="ispay">{{item.ispay == 1 ? '已付款' : '未付款'}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>

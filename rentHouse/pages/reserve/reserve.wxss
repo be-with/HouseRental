@@ -1,0 +1,34 @@
+/* pages/reserve/reserve.wxss */
+
+
+.container{
+    margin: 210rpx auto;
+    text-align: center;
+}
+.container .img image{
+    width: 144rpx;
+    height: 144rpx;
+}
+.container .success-info{
+    margin-top: 25rpx;
+    font-size: 28rpx;
+}
+.container .success-info .title{
+    margin-bottom: 15rpx;
+}
+.container .success-info .date{
+    color: rgb(98, 95, 95);
+    margin-bottom: 15rpx;
+}
+.container .btn-list{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25rpx;
+    font-size: 28rpx;
+}
+.container .btn-list view{
+    border: 1px solid #41adbd;
+    border-radius: 15rpx;
+    padding: 10rpx;
+    color: #41abdb;
+}

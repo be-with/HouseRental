@@ -1,0 +1,101 @@
+/* pages/application/application.wxss */
+
+.container{
+    width: 97%;
+    /* border: 1px solid #000; */
+    margin: 15rpx auto;
+}
+/* 房子信息 */
+.container .house-box{
+    display: flex;
+    margin-top: 15rpx;
+    margin-bottom: 15rpx;
+}
+.container .house-box .img-box{
+    width: 200rpx;
+    height: 120rpx;
+    margin-top: 15rpx;
+    margin-left: 15rpx;
+    border-radius: 10rpx;
+}
+.container .house-box .img-box image{
+    width: 200rpx;
+    height: 120rpx;
+    border-radius: 10rpx;
+}
+.container .house-box .house-info{
+    margin-left: 15rpx;
+    margin-top: 10rpx;
+}
+.container .house-box .house-info .title{
+    font-size: 30rpx;
+    margin-top: 8rpx;
+    color: #888;
+}
+.container .house-box .house-info .address{
+    font-size: 28rpx;
+    margin-top: 8rpx;
+}
+/* 申请看房人的信息 */
+.container .application{
+    margin-top: 35rpx;
+    font-size: 30rpx;
+}
+.container .application .time-box{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20rpx;
+    border-bottom: 1px solid #ccc;
+}
+.container .application .time-box .mark-title{
+    display: flex;
+}
+.container .application .time-box .mark{
+    color: #f40;
+}
+.container .application .time-box .title{
+    color: #888;
+}
+.container .application .person-name,
+.container .application .tel-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 23rpx;
+    margin-left: 10rpx;
+    margin-right: 25rpx;
+    padding-bottom: 20rpx;
+    color: #888;
+    border-bottom: 1px solid #ccc;
+}
+.container .application .person-name .mark-name,
+.container .application .tel-box .mark-tel{
+    display: flex;
+}
+.container .application .person-name .mark-name .mark,
+.container .application .tel-box .mark-tel .mark{
+    color: #f40;
+}
+.container .person-name input,
+.container .tel-box input{
+    width: 50%;
+}
+
+.container .application .message{ 
+    position: relative;
+    display: flex;
+    margin-top: 23rpx;
+    margin-left: 15rpx;
+    font-size: 30rpx;
+}
+
+.container .application .message .indicator{
+    position: absolute;
+    bottom: 0;
+    right: 27rpx;
+    color:#ced6e0
+}
+/* 提交按钮 */
+.btn button{
+    margin-top: 30rpx;
+    background-color: #47adbd;
+  }

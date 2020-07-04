@@ -1,0 +1,32 @@
+/* components/tag/cmp.wxss */
+
+.container{
+    width: 95%;
+    margin-left: 25rpx;
+    margin-bottom: 15rpx;
+    margin-top: 15rpx;
+}
+.container .title{
+    color: #ced6e0;
+    margin-bottom: 15rpx;
+}
+.container .list{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 24rpx;
+}
+.container .list .item{
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0rpx 16rpx;
+    height: 48rpx;
+    background-color: rgba(228, 228, 228, 0.548);
+    margin-left: 20rpx;
+    line-height: 48rpx;
+    margin-top: 15rpx;
+}
+.container .list view.active{
+    background-color: #41ebad;
+}

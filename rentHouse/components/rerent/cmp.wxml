@@ -1,0 +1,28 @@
+<!--components/rerent/cmp.wxml-->
+<!-- <text>components/rerent/cmp.wxml</text> -->
+
+
+
+<view class="container">
+    <view class="item" wx:for="{{orderArr}}" wx:key="index">
+        <view class="img-box">
+            <image src="{{item.img}}" />
+        </view>
+        <view class="order-info">
+            <view class="title-paystatus">
+                <view class="title">{{item.house_name}}</view>
+                <view>
+                    <view class="pay-status">租借中</view>
+                </view>
+            </view>
+            <view class="date">{{item.checkin_date}} - {{item.quit_date}}</view>
+            <view class="nights-price">
+                <view class="nights">{{item.nights}}晚</view>
+                <view class="price">总价：￥{{item.total_price}}</view>
+                <view class="rerent" wx:if="{{item.rerent == null}}" catch:tap="onTap" data-item="{{item}}">{{item.rerent == 0 ?'申请中':'续租'}}</view>
+                <view class="rerent" wx:if="{{item.rerent ==1}}" data-item="{{item}}">申请通过</view>
+                <view class="rerent" wx:if="{{item.rerent ==2}}" data-item="{{item}}">申请失败</view>
+            </view>
+        </view>
+    </view>
+</view>

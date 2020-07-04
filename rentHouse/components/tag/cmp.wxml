@@ -1,0 +1,14 @@
+<!--components/tag/cmp.wxml-->
+<!-- <text>components/tag/cmp.wxml</text> -->
+
+<view class="container" wx:for="{{tagList}}" wx:key="index">
+    <view class="title">{{item.title}}</view>
+    <view class="list">
+        <view wx:for="{{item.facilities}}" 
+            wx:key="index" 
+            bind:tap="onChooseMap" 
+            data-choose="{{item}}"
+            class="item {{curTarget == item ? 'active':''}}"
+        >{{item}}</view>
+    </view>
+</view>

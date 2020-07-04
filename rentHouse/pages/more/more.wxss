@@ -1,0 +1,19 @@
+/* pages/more/more.wxss */
+
+
+.container{
+    width: 100%;
+}
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.content{
+  margin-top: 150rpx;
+}
+
+
+  
+  

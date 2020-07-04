@@ -1,0 +1,31 @@
+/* components/route/cmp.wxss */
+
+.container{
+    width: 95%;
+    /* border: 1px solid #000; */
+    margin: 10rpx auto;
+}
+.container .item{
+    margin-bottom: 15rpx;
+}
+.container .item .house-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15rpx;
+    flex-wrap: wrap;
+}
+.container .item .house-info .title{
+    font-weight: 600;
+    font-size: 32rpx;
+}
+.container .item .house-info .city-address{
+    display: flex;
+    color: #888;
+    font-size: 30rpx;
+}
+.container .item .visit-time{
+    display: flex;
+    font-size: 30rpx;
+    padding-bottom: 25rpx;
+    border-bottom: 1px solid #eee;
+}

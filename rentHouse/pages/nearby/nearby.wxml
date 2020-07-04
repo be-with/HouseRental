@@ -1,0 +1,22 @@
+<!--pages/nearby/nearby.wxml-->
+<!-- <text>pages/nearby/nearby.wxml</text> -->
+
+<view class="container">
+    <!-- 地址 房屋类型(户型) 租住类型(方式) -->
+    <view class="nearby-menu">
+        <picker mode="region" class="menu" bindchange="changeArea">
+          <text>{{city}}</text>
+        </picker>
+        <picker class='menu reorder' bindchange="changeApartment" value="{{indexApa}}" range="{{apartmentArr}}">
+          <text class="picker1" wx:if="{{!selectApa}}">户型</text>
+          <text class="picker1" wx:else>{{apartmentArr[indexApa]}}</text>
+        </picker>
+        <picker class='menu sort' bindchange="changeWay" value="{{indexWay}}" range="{{wayArr}}">
+          <text class="picker1" wx:if="{{!selectWay}}">租住类型</text>
+          <text class="picker1" wx:else>{{wayArr[indexWay]}}</text>
+        </picker>
+      </view>
+
+     <!-- 房源信息 -->
+      <h-houseInfo recommend-arr="{{nearbyArr}}" img="{{img}}" catch:sign="onSign"></h-houseInfo>  
+</view>

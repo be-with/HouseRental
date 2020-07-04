@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "h-threeImg": "/components/threeImg/cmp"
+  }
+}

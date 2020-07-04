@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "h-search": "/components/search/cmp",
+    "h-houseInfo": "/components/houseInfo/cmp"
+  }
+}

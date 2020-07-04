@@ -1,0 +1,25 @@
+/* pages/identity/identity.wxss */
+
+page{
+    background-image: url('http://5b0988e595225.cdn.sohucs.com/images/20180312/7b150c85bd2942d9a571dcbf8635bfa5.jpg');
+    background-size: 100% 100%;
+}
+
+.container{
+    width: 100%;
+    margin: 300rpx auto;
+}
+.container .u-name,
+.container .u-tel,
+.container .u-id,
+.container .u-pwd{ 
+    display: flex;
+    margin-top: 25rpx;
+    margin-left: 50rpx;
+    font-size: 30rpx;
+}
+.container .btn-area button{
+    background-color: rgb(62, 178, 236);
+    color: #fff;
+    margin-top: 15rpx;
+}

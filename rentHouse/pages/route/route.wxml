@@ -1,0 +1,6 @@
+<!--pages/route/route.wxml-->
+<!-- <text>pages/route/route.wxml</text> -->
+
+<view class="container">
+    <h-route application-arr="{{applicationArr}}" applicationFlag="{{applicationFlag}}"></h-route>
+</view>

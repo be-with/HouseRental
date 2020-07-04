@@ -1,0 +1,53 @@
+<!-- pages/application/application.wxml -->
+<!-- <text>pages/application/application.wxml</text> -->
+<view class="container">
+    <form bindsubmit="formSubmit">
+        <view class="house-box">
+            <view class="img-box">
+                <image src="{{img}}" />
+            </view>
+            <view class="house-info">
+                <view class="title">{{title}}</view>
+                <view class="address">{{hasOrder == "true" ? city+address :city}}</view>
+            </view>
+        </view>
+        <!-- 用户申请需填信息 看房时间 姓名 联系方式 留言 -->
+        <view class="application">
+            <!-- 看房时间 -->
+            <picker mode="multiSelector" range="{{rangeArray}}" value="{{curIndex}}" bindchange="onMulChange" bindcolumnchange="onColumnchange">
+                <view class="time-box">
+                    <view class="mark-title">
+                        <view class="mark">*</view>
+                        <view class="title">请选择看房时间：</view>
+                    </view>
+                    <view class="time">{{visitTime}} </view>
+                </view>
+            </picker>
+            <!-- 姓名 -->
+            <view class="person-name">
+                <view class="mark-name">
+                    <view class="mark">*</view>
+                    <view class="name">联系人姓名：</view>
+                </view>
+                <input type="text" placeholder="请输入姓名" placeholder-style='margin-left:160rpx;color:#000' maxlength="20" name="nameValue" value="{{form.nameValue}}" />
+            </view>
+            <!-- 联系方式 -->
+            <view class="tel-box">
+                <view class="mark-tel">
+                    <view class="mark">*</view>
+                    <view class="tel">联系方式：</view>
+                </view>
+                <input type="number" placeholder="请输入手机号" placeholder-style='margin-left:160rpx;color:#000' maxlength="20" name="telValue" value="{{form.telValue}}" />
+            </view>
+            <!-- 留言 -->
+            <view class="message">
+                <textarea name="message" placeholder="添加留言~" maxlength="{{max}}" placeholder-style="font-size:28rpx;color:#ced6e0" bindinput="onDescribeInput"></textarea>
+                <view class="indicator">{{currentWordNumber}}/{{max}}</view>
+            </view>
+        </view>
+        <!-- 提交按钮 -->
+        <view class="btn">
+            <button formType="submit">提交</button>
+        </view>
+    </form>
+</view>

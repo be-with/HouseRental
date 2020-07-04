@@ -1,0 +1,35 @@
+<!-- pages/houseManage/houseManage.wxml -->
+<!-- <text>pages/houseManage/houseManage.wxml</text> -->
+<view class="container">
+    <!-- 发布房源 -->
+    <view class="publish" catch:tap="onPublishTap">发布房源</view>
+    <!-- 删除房源 -->
+    <view class="delete-box">
+        <view class="delete" catch:tap="onDeleteTap">删除房源</view>
+        <view class="check-box" wx:if="{{isShowCheckBox}}">
+            <checkbox class="all" value="all" catch:tap="checkboxAllChange" checked="{{disabaledAll}}"/>
+            全选
+            <view class="item-box">
+                <view class="item" wx:for="{{houseArr}}" wx:key="index">
+                    <checkbox class="single" 
+                        catch:tap="checkboxChange" 
+                        checked="{{disabaledSingle}}"
+                        data-item="{{item}}"/>
+                    <view class="img-box">
+                        <image src="{{imgList[index][0]}}" />
+                    </view>
+                    <view class="house-info">
+                        <view class="title-adjust">
+                            <view class="title">{{item.title}}</view>
+                        </view>
+                        <view class="type">
+                            <view class="house-type">{{item.type}}</view>
+                            <view class="rent-type">{{item.rtype}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <button class="confirm" catch:tap="onConfirmTap">确定</button>
+        </view>
+    </view>
+</view>

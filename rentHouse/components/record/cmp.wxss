@@ -1,0 +1,73 @@
+/* components/record/cmp.wxss */
+
+/* components/order/cmp.wxss */
+
+.container{
+    width: 97%;
+    /* border: 1px solid #000; */
+    margin: 10rpx auto;
+}
+.container .item{
+    display: flex;
+    margin-bottom: 15rpx;
+}
+.container .item .img-box{
+    width: 200rpx;
+    height: 120rpx;
+    margin-top: 15rpx;
+    margin-left: 15rpx;
+    border-radius: 10rpx;
+}
+.container .item .img-box image{
+    width: 200rpx;
+    height: 120rpx;
+    border-radius: 10rpx;
+}
+.container .item .order-info{
+    margin-left: 15rpx;
+}
+.container .item .order-info .title-paystatus{
+    width: 465rpx;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10rpx;  
+    /* background-color: red; */
+} 
+.container .item .order-info .title-paystatus .title{
+    font-size: 32rpx;
+    font-weight: 600;
+}
+
+.container .item .order-info .title-paystatus .all{
+    display: none;
+}
+.container .item .order-info .title-paystatus .pay-status{
+    margin-right: 3rpx;
+    font-size: 30rpx;
+    color: #888;
+}
+.container .item .order-info .date{
+    margin-top: 7rpx;
+    font-size: 28rpx;
+    color: #888;
+}
+.container .item .order-info .nights-price{
+    display: flex;
+}
+.container .item .order-info .nights-price .nights{
+    font-size: 24rpx;
+    color: #888;
+}
+.container .item .order-info .nights-price .price{
+    font-size: 28rpx;
+    color: #888;
+    margin-left: 15rpx;
+}
+.container .item .order-info .nights-price .do{
+    font-size: 26rpx;
+    color:rgb(7, 150, 172);
+    padding: 10rpx;
+    border: 1px solid rgb(7, 150, 172);
+    border-radius: 5rpx;
+    margin-left:150rpx;
+}

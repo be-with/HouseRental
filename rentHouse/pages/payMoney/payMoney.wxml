@@ -1,0 +1,155 @@
+<!--pages/payMoney/payMoney.wxml-->
+<!-- <text>pages/payMoney/payMoney.wxml</text> -->
+
+<view class="container">
+        <!-- 房子信息 -->
+    <view class="house-info">
+        <view class="detailed">
+            <view class="house-name">{{houseName}}</view>
+            <view class="agreement" catch:tap="onShowAgreeTap">
+                <view class="context">协议条文</view>
+                <view class="mark">？</view>
+            </view>
+        </view>
+        <view class="date-time">
+            <view class="checkInAndOut">{{newInDate}}-{{newOutDate}}</view>
+            <view class="nights">共{{nights}}晚</view>
+        </view>
+        <!-- 协议条文部分 -->
+        <view class="agreeContent" wx:if="{{isShow}}">
+            <!-- 退款规则 -->
+            <view class="refund">
+                <view class="title">退款规则</view>
+                <view class="content">
+                    <view class="icon"></view>
+                    根据酒店政策，预订成功后不可取消/变更，如未入住，酒店将扣除全额房费
+                </view>
+            </view>
+            <view class="explain">
+                <view class="title">预订说明</view>
+                <view class="content">
+                    <view class="icon"></view>
+                    如需发票，请到酒店前台索取 根据公安机关规定，中国籍住客仅限使用身份证登记入住，
+                    岁以下未成年人的家长携带好未成年人的身份证或《户口簿》办理登记入住（其他证件不适用）
+                </view>
+            </view>
+            <view class="rule">
+                <view class="title">使用规则</view>
+                <view class="content content1">
+                    <view class="icon"></view>
+                    请在8:00之后入住并于次日12:00之前退房；如需提前入住或延时退房，请咨询商家
+                </view>
+                <view class="content content2">
+                    <view class="icon"></view>
+                    入住需要押金，金额以前台为准
+                </view>
+                <view class="content content3">
+                    <view class="icon"></view>
+                    请携带所有入住人的有效身份办理入住，入住必须按照一人一证
+                </view>
+            </view>
+            <view class="form">
+                <view class="title">房型说明</view>
+                <view class="content">
+                    <view class="icon"></view>
+                    房型图片仅可代表其中部分房间以作为参考，实际提供房型信息请以文字信息为准，如文字信息不全或包含多种多种情况，请提前与商家沟通确认后再下单预订
+                </view>
+            </view>
+            <view class="close" catch:tap="onHideAgreeTap">
+                <image src="../../images/close.png" />
+            </view>
+        </view>
+    </view>
+    <!-- 订单信息 -->
+    <view class="order-info">
+        <picker bindchange="onNumTap" value="{{index}}" range="{{personNum}}">
+            <view class="person-num">
+                <view>入住人数</view>
+                <view>{{personNum}}人 ></view>
+            </view>
+        </picker>
+        <view class="line"></view>
+        <view class="name-box">
+            <view class="person-name">
+                <view>联系人姓名</view>
+                <input placeholder="请填入姓名" 
+                    placeholder-style='margin-left:160rpx;' 
+                    maxlength="20" 
+                    name="nameValue"
+                    value="{{personName}}"/>
+            </view>
+        </view>
+        <view class="line"></view>
+        <view class="tel-box">
+            <view class="person-tel">
+                <view>联系人电话</view>
+                <input placeholder="请填入电话" 
+                    placeholder-style='margin-left:160rpx;' 
+                    maxlength="11" 
+                    name="telValue"
+                    value="{{tel}}"/>
+            </view>
+        </view>
+        <view class="line"></view>
+    </view>
+    <view class="deposit">
+        <view class="title">押金</view>
+        <view class="content">需向前台缴纳押金，金额请询问前台人员</view>
+    </view>
+    <!-- tips -->
+    <view class="tips" catch:tap="onHideDetailTap">
+        <!-- 退款规则 -->
+        <view class="refund">
+            <view class="title">退款规则</view>
+            <view class="content">根据酒店政策，预订成功后不可取消/变更，如未入住，酒店将扣除全额房费</view>
+        </view>
+        <!-- 预订说明 -->
+        <view class="reorder">
+            <view class="title">预订说明</view>
+            <view class="content">
+                如需小票，请到酒店前台索取  根据公安机关规定，中国籍住客仅限使用身份证登记入住，16
+                 岁以下未成年人的家长携带好未成年人的身份证或《户口簿》办理登记入住（其他证件不适用）
+            </view>
+        </view>
+        <!-- 使用规则 -->
+        <view class="use">
+            <view class="title">使用规则</view>
+            <view class="content">
+                请在8:00之后入住并于次日12:00之前退房 如需提前入住或延时退房，请咨询商家  入住需要押金，金额以前台为准 请携带所有入住人的有效身份办理入住，入住必须按照一人一证
+            </view>
+        </view>
+        <!-- 房型说明 -->
+        <view class="form">
+            <view class="title">房型说明</view>
+            <view class="content">
+                <view class="icon"></view>
+                房型图片仅可代表其中部分房间以作为参考，实际提供房型信息请以文字信息为准，如文字信息不全或包含多种多种情况，请提前与商家沟通确认后再下单预订
+            </view>
+        </view>
+    </view>
+    <!-- 价格 提交订单 -->
+    <view class="confirm">
+        <view class="computed-price">总价￥{{totalPrice}}</view>
+        <view class="detailed" catch:tap="ondetailTap">明细</view>
+        <button class="submit-order" catch:tap="onSubmitTap">提交订单</button>
+    </view>
+    <!-- 明细 -->
+    <view class="detail-box" wx:if="{{isShowDetail}}">
+        <view class="title">明细</view>
+        <view class="price">
+            <view>房价</view>
+            <view>￥{{totalPrice}}</view>
+        </view>
+        <view class="detail-price" wx:for="{{checkInDateArr}}" wx:key="index">
+            <view>{{item}}</view>
+            <view>1x￥{{totalPrice/nights}}</view>
+        </view>
+    </view>
+
+    <!-- 确认支付 -->
+    <view class="pay" wx:if="{{isShowPay}}">
+        <view class="close" data-set="close" catch:tap="onCloseTap">x</view>
+        <view class="money">￥{{totalPrice}}</view>
+        <button class="confirm-btn" catch:tap="onConfirmTap" data-type="confirm" type="primary">确认支付</button>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+<!--pages/rent/rent.wxml-->
+<!-- <text>pages/rent/rent.wxml</text> -->
+
+<!-- 用户 续租申请 -->
+<view class="container">
+    <h-rerent order-arr="{{ordersRenting}}" catch:rerent="onRerentTap"></h-rerent>
+</view>

@@ -1,0 +1,44 @@
+<!--pages/identity/identity.wxml-->
+<!-- <text>pages/identity/identity.wxml</text> -->
+
+<!-- pages/publish/publish.wxml -->
+<!-- <text>pages/publish/publish.wxml</text> -->
+<view class="container">
+    <form bindsubmit="formSubmit">
+    <!-- 业主名字 -->
+    <view class="u-name">
+        <text>真实姓名：</text>
+        <input name="realName" placeholder="请输入真实名字" placeholder-style="font-size:28rpx;color:rgba(0,0,0,.5)" value="{{form.realName}}"/>
+    </view>
+
+    <view class="line"></view>
+
+    <!-- 手机号 -->
+    <view class="u-tel">
+        <text>手机号：</text>
+        <!-- <input class="" placeholder="请输入真实名字" placeholder-style="font-size:28rpx" bindconfirm="onNameConfirm"/> -->
+        <input name="phone" placeholder="请输入手机号" placeholder-style="font-size:28rpx;color:rgba(0,0,0,.5)" value="{{form.phone}}"/>
+    </view>
+    <view class="line"></view>
+
+    <!-- 身份证 -->
+    <view class="u-id">
+        <text>身份证号：</text>
+        <!-- <input class="" placeholder="请输入真实名字" placeholder-style="font-size:28rpx" bindconfirm="onNameConfirm"/> -->
+        <input name="id" placeholder="请输入身份证号" placeholder-style="font-size:28rpx;color:rgba(0,0,0,.5)" value="{{form.id}}"/>
+    </view>
+    <view class="line"></view>
+
+    <!-- 后台密码 -->
+    <view class="u-pwd">
+        <text>后台密码：</text>
+        <!-- <input class="" placeholder="请输入真实名字" placeholder-style="font-size:28rpx" bindconfirm="onNameConfirm"/> -->
+        <input name="pwd" placeholder="请设置后台密码" placeholder-style="font-size:28rpx;color:rgba(0,0,0,.5)" value="{{form.pwd}}"/>
+    </view>
+    <view class="line"></view>
+    <!-- 发布按钮 -->
+    <view class="btn-area">
+    <button formType="submit" >提交</button>
+  </view>
+    </form>
+</view>

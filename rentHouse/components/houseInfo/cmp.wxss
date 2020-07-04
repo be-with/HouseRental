@@ -1,0 +1,60 @@
+/* components/recommend/cmp.wxss */
+
+.container{
+    width: 700rpx;
+    margin: 0 auto;
+    margin-top: 20rpx;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 4rpx 20rpx 0 rgba(212,217,223,.5);
+    border-radius: 4px;
+}
+.house-box{
+    width: 340rpx;
+    font-size: 25rpx;
+    margin-left: 8rpx;
+    margin-top: 5rpx;
+    margin-bottom: 8rpx;
+}
+.house-box image{
+    width: 330rpx;
+    height: 200rpx;
+    margin:5rpx;
+    margin-bottom: -3rpx;
+}
+.house-info{
+    margin-left: 5rpx;
+}
+.house-info .title{
+    width: 300rpx;
+    color:#333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.house-info .price-apply{
+    /* display: flex; */
+    margin-top: 10rpx;
+}
+.house-info .price-apply .apply-signing{
+    display: flex;
+}
+.house-info .price,
+.house-info .contact{
+    color: #999;
+}
+.price-apply .price{
+    display: inline-block;
+    margin-top: 6rpx;
+}
+.price-apply .apply,
+.price-apply .signing{
+    margin-left: 15rpx;
+    background-color: #87CEFA;
+    padding: 5rpx;
+    color: rgb(18, 99, 99);
+    border-radius: 12rpx;
+}
+.house-info .contact{
+    margin-top: 5rpx;
+}

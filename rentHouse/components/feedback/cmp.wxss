@@ -1,0 +1,67 @@
+/* components/feedback/cmp.wxss */
+
+.feedback {
+    background: #f0f0f0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .feedback-info {
+    margin-left: 30rpx;
+    margin-right: 30rpx;  
+  }
+  /* textarea */
+   .content {
+     position: relative;
+    background: #fff; 
+    margin-bottom: 30rpx;
+    margin-top: 50rpx;
+    border-radius: 11rpx;
+    border: 3rpx solid #e4e4e4;
+    padding: 30rpx;
+  } 
+  .content textarea{
+     width: 100%;
+  }
+  .content .indicator{
+    position: absolute;
+    bottom: 0;
+    right: 27rpx;
+    color:#ced6e0
+  }
+  /* 姓名 & 手机号 input样式*/
+  .text-input {
+    background: #fff;
+    display: flex;
+    overflow: hidden;
+    border: 3rpx solid #e4e4e4;
+    border-radius: 11rpx;
+    line-height: 93rpx;
+    padding-left: 40rpx;
+     margin-top: 30rpx; 
+  }
+  .feedback-input {
+    height: 93rpx;
+    padding-left: 30rpx;
+  }
+  .tip{
+    font-size: 28rpx;
+    line-height: 20rpx;
+    color: #828282;
+  }
+  /* 按钮：提交建议 */
+  .submit-suggest {
+    width: 100% ;
+    height: 92rpx;
+    line-height: 92rpx;
+    text-align: center;
+    background-color: rgb(7,150,172);
+    font-size: 37rpx;
+    position: fixed;
+    bottom: 0;
+    border-radius: 15rpx;
+  }
+  .submit-suggest button{
+    background-color: rgb(7,150,172);
+    color: #fff;
+  }

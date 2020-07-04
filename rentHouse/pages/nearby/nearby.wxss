@@ -1,0 +1,23 @@
+/* pages/nearby/nearby.wxss */
+
+/* 菜单 */
+.nearby-menu{
+    display: flex;
+    border-top: 1px solid #C3C3C3;
+    padding: 15rpx;
+    justify-content: space-around;
+    margin-top: 5rpx;
+  }
+  .nearby-menu .menu{
+    border-right: 1px solid #c3c3c3;
+  }
+  .nearby-menu .menu:last-child{
+    border-right: none;
+  }
+  .nearby-menu text{
+    display: flex;
+    justify-content: center;
+    margin: 0 50rpx;
+    font-size: 30rpx;
+    padding: 5px;
+  }

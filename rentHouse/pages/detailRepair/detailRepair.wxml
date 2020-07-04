@@ -1,0 +1,30 @@
+<!-- pages/detailRepair/detailRepair.wxml -->
+<!-- <text>pages/detailRepair/detailRepair.wxml</text> -->
+<view class="container">
+    <view class="item" wx:for="{{repairInfo}}" wx:key="index">
+        <!-- 报修人名字 手机号 -->
+        <view class="name-tel">
+            <text class="name">报修人：{{item.repair_name}}</text>
+            <text class="tel">手机号：{{item.repair_tel}}</text>
+        </view>
+
+
+        <!-- <view class="line"></view> -->
+        <!-- 地址 -->
+        <!-- <view class="r-addrdetail">
+            <text>详细地址：{{houseInfo.city + houseInfo.address}}</text>
+        </view> -->
+        <view class="line"></view>
+        <!-- 报修内容 -->
+        <view class="content">
+            <text class="">内容：{{item.content}}</text>
+        </view>
+        <view class="line"></view>
+        <!-- 报修图片 -->
+        <view class="img-box">
+            <view class="pic">图片：{{imgArr.length == 0 ? '没有报修图片' : ''}}</view>
+            <h-threeImg wx:if="{{imgArr.length != 0}}" img-arr="{{imgArr[0]}}"></h-threeImg>
+        </view>
+    </view>
+    <view class="no-repair" wx:if="{{noRepair}}">暂无报修信息~</view>
+</view>

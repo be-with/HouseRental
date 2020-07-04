@@ -1,0 +1,30 @@
+<!-- pages/signing/signing.wxml -->
+<!-- <text>pages/signing/signing.wxml</text> -->
+<view class="container">
+    <h-signing swiper-img="{{swiper}}" house-info="{{houseInfo}}" deploy="{{deploy}}" disopose="{{disopose}}" longitude="{{longitude}}" latitude="{{latitude}}" hasOrder="{{hasOrder}}"></h-signing>
+    <!-- 分隔线 -->
+    <view class="line"></view>
+    <!-- 入住 离店 -->
+    <view class="time">
+        <view class="date-time">
+            <view class="checkin-time">
+                <view class="checkin-text">入住</view>
+                <view class="checkin-day">{{checkInDate}}</view>
+            </view>
+            <view class="nights">共{{nights}}晚</view>
+            <view class="checkout-time">
+                <view class="checkout-text">离店</view>
+                <view class="checkout-day">{{checkOutDate}}</view>
+            </view>
+        </view>
+        <view class="modify-time" catch:tap="onModifyTap">修改日期></view>
+        
+    </view>
+    <!-- 分隔块 -->
+    <view class="line-box"></view>
+    <!-- 线上签约 看房申请 -->
+    <view class="btn-list">
+        <view class="sign-btn" catch:tap="onLineTap">线上签约</view>
+        <view class="apply-btn" catch:tap="onApplicationTap">看房预约</view>
+    </view>
+</view>

@@ -1,0 +1,14 @@
+<!-- components/policy/cmp.wxml -->
+<!-- <text>components/policy/cmp.wxml</text> -->
+<!-- 政策法规 -->
+<view class="container">
+    <view wx:for="{{policy}}" class="title-content {{index == 1 ? 'active' : '' }}" wx:key="index">
+        <view class="title">
+            <view class="left"></view>
+            <view class="right">{{item.title}}</view>
+        </view>
+        <view class="content" wx:for="{{item.content}}" wx:key="index">
+            {{item}}
+        </view>
+    </view>
+</view>

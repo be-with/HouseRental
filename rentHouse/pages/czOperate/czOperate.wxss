@@ -1,0 +1,29 @@
+/* pages/czOperate/czOperate.wxss */
+
+.container .infomation{
+    background-color: #f8f8f8;
+}
+
+.container .infomation .title{
+    margin-top: 20rpx;
+    background-color: #47abcd;
+    color: #fff;
+    padding: 20rpx;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+.container .infomation .order-box{
+    font-size: 28rpx;
+    margin: 15rpx 10rpx 0rpx;
+    border: 1px solid #eee;
+    padding: 15rpx;
+    box-shadow: 0px 1px 2px #ccc;
+}
+.container .infomation .order-box .person-info,
+.container .infomation .order-box .date-ispay{
+    display: flex;
+    justify-content: space-between;
+}
+.container .infomation .order-box .date-ispay{
+    margin-top: 10rpx;
+}

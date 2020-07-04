@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "h-record": "/components/record/cmp"
+
+  }
+}

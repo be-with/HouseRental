@@ -1,0 +1,11 @@
+/* pages/order/order.wxss */
+
+page{
+    background-color: #f3f3f3;
+}
+
+.order{
+    margin-top: 20px;
+    font-size: 30rpx;
+    /* background-color: coral; */
+}

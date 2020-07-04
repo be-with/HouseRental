@@ -1,0 +1,153 @@
+/* pages/maintain/maintain.wxss */
+
+page{
+    background-color: #f8f8f8;
+}
+/* 房子信息 */
+.container .house-name .title{
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(69,90,100,.6);
+    padding: 60rpx 30rpx 20rpx;
+
+}
+.container .house-info{
+    display: flex;
+    font-size: 28rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 16px;
+    line-height: 24rpx;
+}
+.container .house-info .mark{
+    color: #f40;
+}
+.container .house-info .infomation{
+    margin-left: 5rpx;
+}
+.container .house-info .picker{
+    margin-left: 300rpx;
+}
+/* 报修信息 */
+.container .repair-box .title{
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(69,90,100,.6);
+    padding: 60rpx 30rpx 20rpx;
+}
+.container .repair-box .repair-info{
+    font-size: 28rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 16px;
+    line-height: 24rpx;
+}
+.container .repair-box .repair-info .repair-type{
+    border-bottom: 1px solid #eee;
+    padding-bottom: 25rpx;
+}
+.container .repair-box .repair-info .repair-type,
+.container .repair-box .repair-info .repair-name,
+.container .repair-box .repair-info .repair-tel,
+.container .repair-box .repair-info .repair-content{
+    display: flex;
+}
+.container .repair-box .repair-info .mark{
+    color: #f40;
+}
+.container .repair-box .repair-info .type,
+.container .repair-box .repair-info .name,
+.container .repair-box .repair-info .tel,
+.container .repair-box .repair-info .content{
+    margin-left: 5rpx;
+}
+.container .repair-box .repair-info .picker,
+.container .repair-box .repair-info .inp{
+    margin-left: 300rpx;
+}
+.container .repair-box .repair-info .repair-name,
+.container .repair-box .repair-info .repair-tel{
+    margin-top: 24rpx;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15rpx;
+}
+.container .repair-box .repair-info .repair-name .inp{
+    width: 275rpx;
+}
+.container .repair-box .repair-info .repair-tel .inp,
+.container .repair-box .repair-info .repair-content .inp{
+    width: 245rpx;
+}
+.container .repair-box .repair-info .repair-content{
+    margin-top: 24rpx;
+}
+/* 添加图片 */
+.up-pic{
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(69,90,100,.6);
+    padding: 60rpx 30rpx 20rpx;
+}
+.flex{
+    display: flex;
+  }
+  .addPic{
+    margin-left: 15rpx;
+  }
+  .up-pic{
+    /* padding:20rpx 24rpx; */
+    width: 100%;
+    justify-content: center;
+  }
+  .pic-box{
+    margin-top:20rpx;
+    flex-flow:wrap;
+     width:95%; 
+  }
+  .ap-box{
+     position: relative;
+     margin:0rpx 10rpx 10rpx;
+  }
+  .add-pic{
+    width: 160rpx;
+    height: 160rpx;
+    margin-right: 20rpx;
+    position: relative;
+    /* margin: 20rpx 30rpx 20rpx 30rpx; */
+  }
+  .img-add{
+      width: 120rpx;
+      height: 120rpx;
+      margin-top: 30rpx;
+      margin-left: 30rpx;
+  }
+  .img-del{
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: -22rpx;
+    margin-top: -16rpx
+  }
+  /* 删除图片 */
+  .img-de{
+    width:45rpx;
+    height:45rpx;
+    border-radius:50%;
+    position:absolute;
+    right:-41rpx;
+    top:5rpx;
+  }
+  .hong-contant .teamwork-btn{ 
+    width: 360rpx;
+    height: 88rpx;
+    border-radius: 50rpx;
+    color: white;
+    background-color:#14a1fd;
+    margin: 0 auto;
+    margin-top: 80rpx;
+    margin-bottom: 40rpx;
+  }
+  .btn-area button{
+    background-color: #47adbd;
+  }  

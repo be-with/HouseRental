@@ -1,0 +1,40 @@
+/* components/analyse/cmp.wxss */
+
+
+.title-content .title{
+    display: flex;
+    margin-left: 10rpx;
+}
+.title-content .title .title-left{
+    margin-right: 45rpx;
+    font-family: 'CharlemagneStd-Bold';
+    font-weight: 600;
+    font-size: 42rpx;
+    margin-left: 25rpx;
+    margin-top: -15rpx;
+}
+.title-content .title .title-right{
+    font-size: 38rpx;
+    font-family: '方正兰亭超细黑简体';
+    font-weight: 700;
+}
+.title-content .line{
+    width: 75%;
+    height: 3rpx;
+    background-color: #000;
+    margin-left: 180rpx;
+    margin-top: 15rpx;
+}
+.title-content .content{
+    margin-top: 25rpx;
+    margin-left: 25rpx;
+}
+.title-content .content .content-title{
+    font-size: 32rpx;
+    font-weight: 600;
+    margin: 18rpx 0rpx;
+}
+.title-content .content .context{
+    /* text-indent: 2rem; */
+    font-size: 28rpx;
+}

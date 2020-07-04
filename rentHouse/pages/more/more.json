@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "h-nav": "/components/nav/cmp",
+    "h-policy": "/components/policy/cmp",
+    "h-analyse": "/components/analyse/cmp",
+    "h-help": "/components/help/cmp",
+    "h-feedback": "/components/feedback/cmp"
+
+  }
+}

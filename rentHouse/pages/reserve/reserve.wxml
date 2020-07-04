@@ -1,0 +1,16 @@
+<!--pages/reserve/reserve.wxml-->
+<!-- <text>pages/reserve/reserve.wxml</text> -->
+
+<view class="container">
+    <view class="img">
+        <image src="../../images/reserve-success.png" />
+    </view>
+    <view class="success-info">
+        <view class="title">您已成功预定 {{houseName}}</view>
+        <view class="date">{{newInDate}}-{{newOutDate}}（共{{nights}}晚）</view>
+    </view>
+    <view class="btn-list">
+        <view class='look-order' catch:tap="onLookTap">查看订单</view>
+        <view class='back' catch:tap="onBackTap">返回首页</view>
+    </view>
+</view>

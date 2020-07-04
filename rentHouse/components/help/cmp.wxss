@@ -1,0 +1,73 @@
+/* components/help/cmp.wxss */
+
+
+
+.container .question-item {
+    background: #fbfbfb;
+    border-radius: 12rpx;
+    box-shadow: 3rpx 3rpx 3rpx 3rpx #dad9d9;
+    font-size: 32rpx; 
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    margin-top: 20rpx;
+    padding-bottom: 20rpx;
+  }
+  /* 提问内容 */
+  .question-content {
+     display: flex;
+     flex-direction: row;
+     margin-right: 30rpx;
+  }
+  .question-icon-Q {
+    background-color: #41adbd;
+    width: 60rpx;
+    height: 52rpx;
+    text-align: center;
+    border-radius: 12rpx;
+    padding-top: 5rpx;
+    margin: 30rpx;
+    color: #fff;
+  }
+  .question-content-title {
+    width: 85%;
+    margin-top: 30rpx;
+  }
+  /* 回答内容 */
+  .answer-content {
+   display: flex;
+   flex-direction: row;
+   margin-right: 30rpx;
+   width: 80%;
+   margin-left: 100rpx;
+  }
+  .answer-icon-A {
+    background-color: #e24e54;
+    width: 60rpx;
+    height: 52rpx;
+    text-align: center;
+    border-radius: 12rpx;
+    margin: 20rpx;
+    padding-top: 10rpx;
+    color: #fff;
+  }
+  .answer-content-text {
+    width: 85%;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+  }
+
+  /* 拨打电话 */
+  .telephone {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50rpx;
+  }
+  .telephone-text {
+    font-size: 32rpx;
+  }
+  .telephone-number {
+    font-size: 46rpx;
+    color: #4bb1c0;
+    margin-top: 8rpx;
+  }

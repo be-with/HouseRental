@@ -1,0 +1,61 @@
+/* pages/detailRepair/detailRepair.wxss */
+
+.container{
+    width: 100%;
+}
+
+.container .item{
+    width: 97%;
+    border: 1px solid #ccc;
+    margin: 20rpx auto;
+}
+
+.container .name-tel{
+    width: 700rpx;
+    display: flex;
+    margin-left: 15rpx;
+    margin-top: 20rpx;
+    justify-content: space-between;
+}
+
+.container .r-prevPrice,
+.container .r-addrdetail,
+.container .content{ 
+    display: flex;
+    margin-top: 5rpx;
+    margin-left: 15rpx;
+    font-size: 30rpx;
+}
+.container .content{
+    margin-right: 10rpx;
+}
+.container .line{
+    width: 100%;
+    height: 2rpx;
+    background-color: #fbfbfb;
+    margin: 10rpx 0rpx;
+
+}
+.container .img-box{
+    padding-bottom: 10rpx;
+}
+.container .img-box .pic{
+    margin-top: 10rpx;
+    margin-left: 15rpx;
+    font-size: 30rpx;
+}
+.container .img-box image{
+    display: inline-block;
+    /* width: 200rpx;
+    height: 200rpx; */
+    margin-left: 15rpx;
+    margin-right: 5rpx;
+    margin-top: 20rpx;
+}
+
+/* 暂无报修信息 样式 */
+.no-repair{
+    font-size: 28rpx;
+    color: #686565;
+    margin-left: 25rpx;
+}

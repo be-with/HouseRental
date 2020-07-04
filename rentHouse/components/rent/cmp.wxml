@@ -1,0 +1,28 @@
+<!-- components/rerent/cmp.wxml -->
+<!-- <text>components/rerent/cmp.wxml</text> -->
+<view class="container">
+    <view class="item" wx:for="{{orderArr}}" wx:key="index" wx:if="{{item.rerent != null}}">
+        <view class="img-box">
+            <image src="{{item.img}}" />
+        </view>
+        <view class="order-info">
+            <view class="title-paystatus">
+                <view class="title">{{item.house_name}}</view>
+                <view>
+                    <view class="pay-status" wx:if="{{item.rerent == 1}}">已通过</view>
+                    <view class="pay-status" wx:if="{{item.rerent == 2}}">未通过</view>
+                    <view class="pay-status" wx:if="{{item.rerent == 0}}">待处理</view>
+                </view>
+            </view>
+            <view class="date">{{item.checkin_date}} - {{item.quit_date}}</view>
+            <view class="nights-price">
+                <view class="nights">{{item.nights}}晚</view>
+                <view class="price">总价:￥{{item.total_price}}</view>
+                <view class="agree-disagree" wx:if="{{item.rerent < 1}}">
+                    <view class="agree" catch:tap="onAgreeTap" data-item="{{item}}">通过</view>
+                    <view class="disagree" catch:tap="onDisagreeTap" data-item="{{item}}">不通过</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

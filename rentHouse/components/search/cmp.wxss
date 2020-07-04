@@ -1,0 +1,21 @@
+/* components/search/cmp.wxss */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: -39rpx; */
+}
+.search{
+    display: inline-block;
+    width: 480rpx;
+    height: 80rpx;
+    padding-left: 20rpx;
+    background-color: #f3f3f3;
+    font-size: 28rpx;
+}
+.text{
+    font-size: 28rpx;
+    margin-left: 10rpx;
+    display: inline-block;
+}

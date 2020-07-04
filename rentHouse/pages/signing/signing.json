@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "h-signing": "/components/signing/cmp"
+  }
+}

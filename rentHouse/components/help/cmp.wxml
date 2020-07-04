@@ -1,0 +1,26 @@
+<!-- components/help/cmp.wxml -->
+<!-- <text>components/help/cmp.wxml</text> -->
+<view class="container">
+  <view class="question">
+    <block wx:for="{{content}}" wx:key="index">
+      <!-- 问题 -->
+      <view class='question-item'>
+        <!-- 提问 -->
+        <view class='question-content' data-index="index" bindtap='showHide'>
+          <text class='question-icon-Q'>Q</text>
+          <text class='question-content-title'>{{item.title}}</text>
+        </view>
+        <!-- 回答 -->
+        <view class='answer-content' wx:if="{{item.shows}}" wx:if="{{index == curIndex}}">
+          <text class='answer-icon-A'>A</text>
+          <text class='answer-content-text'>{{item.contents}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 拨打电话 -->
+  <view class='telephone'>
+    <text class='telephone-text'>没有您想了解的问题？请拨打客服电话</text>
+    <text class='telephone-number'>0595-86422222</text>
+  </view>
+</view>

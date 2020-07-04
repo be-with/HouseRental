@@ -1,0 +1,112 @@
+<!-- pages/publish/publish.wxml -->
+<!-- <text>pages/publish/publish.wxml</text> -->
+<view class="container">
+    <form bindsubmit="formSubmit">
+        <!-- 业主名字 -->
+        <view class="h-name">
+            <text>业主名字：</text>
+            <!-- <input class="" placeholder="请输入真实名字" placeholder-style="font-size:28rpx" bindconfirm="onNameConfirm"/> -->
+            <input name="realName" placeholder="请输入真实名字" placeholder-style="font-size:28rpx" value="{{form.realName}}" />
+        </view>
+        <view class="line"></view>
+        <!-- 业主微信名 -->
+        <!-- <view class="h-nickName">
+            <text>微信名：</text> -->
+            <!-- <input class="" placeholder="请输入微信名" placeholder-style="font-size:28rpx" bindconfirm="onNickConfirm"/> -->
+            <!-- <input name="nickName" placeholder="请输入微信名" placeholder-style="font-size:28rpx" value="{{form.nickName}}" />
+        </view> -->
+        <!-- <view class="line"></view> -->
+        <!-- 手机号 -->
+        <view class="h-name">
+            <text>手机号</text>
+            <!-- <input class="" placeholder="请输入真实名字" placeholder-style="font-size:28rpx" bindconfirm="onNameConfirm"/> -->
+            <input name="phone" placeholder="请输入手机号" placeholder-style="font-size:28rpx" value="{{form.phone}}" />
+        </view>
+        <view class="line"></view>
+        <!-- 名称 -->
+        <view class="h-houseName">
+            <text>名称：</text>
+            <input name="houseName" placeholder="请输入房子名称" placeholder-style="font-size:28rpx" value="{{form.houseName}}" />
+        </view>
+        <view class="line"></view>
+        <!-- 房子省市区 -->
+        <view class="h-addr">
+            <text>地址：</text>
+            <picker mode="region" bindchange="onRegionChange" value="{{region}}">
+                <view class="picker">{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
+            </picker>
+        </view>
+        <view class="line"></view>
+        <!-- 地址 -->
+        <view class="h-addrdetail">
+            <text>详细地址：</text>
+            <input name="addrDetail" placeholder="请输入详细地址" placeholder-style="font-size:28rpx" value="{{form.addrDetail}}" />
+        </view>
+        <view class="line"></view>
+        <!-- 租金 -->
+        <view class="h-rentPrice">
+            <text>租金：</text>
+            <input name="rentPrice" placeholder="请输入租金" placeholder-style="font-size:28rpx" value="{{form.rentPrice}}" />
+        </view>
+        <view class="line"></view>
+        <!-- 房屋面积 -->
+        <view class="h-area">
+            <text>房屋面积：</text>
+            <input name="area" placeholder="请输入面积（㎡）" placeholder-style="font-size:28rpx" value="{{form.area}}" />
+        </view>
+        <view class="line"></view>
+        <!-- 详细描述 -->
+        <view class="describe">
+            <textarea name="describe" placeholder="描述会给你带来快速成交哦~" maxlength="{{max}}" placeholder-style="font-size:28rpx;color:#ced6e0" bindinput="onDescribeInput"></textarea>
+            <view class="indicator">{{currentWordNumber}}/{{max}}</view>
+        </view>
+        <view class="tip">中介将收取收入的15%作为管理费用</view>
+        <view class="line"></view>
+        <!-- 照片 -->
+        <view class='up-pic'>
+            <text class="addPic">添加图片</text>
+            <view class='flex pic-box'>
+                <block wx:key="imgbox" wx:for="{{imgbox}}">
+                    <view class='ap-box'>
+                        <view class='add-pic'>
+                            <image class='add-pic' src='{{item}}'></image>
+                            <view class='img-de' data-deindex='{{index}}' bindtap='imgDelete1'>
+                                <image class='img-del' src='../../images/del.png'></image>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                <view class='add-pic' bindtap='addPic1' wx:if="{{imgbox.length<6}}">
+                    <image class='img-add' src='../../images/add.png'></image>
+                </view>
+            </view>
+        </view>
+        <!-- 房屋类型 -->
+        <h-tag tag-list="{{apartList}}" bind:choosed="onApartChoosed"></h-tag>
+        <!-- 租住类型 -->
+        <h-tag tag-list="{{rentalList}}" bind:choosed="onRentalChoosed"></h-tag>
+        <!-- 租房起止时间 -->
+        <view class="h-date" wx:if="{{isShowDate}}">
+            <text>起止时间：</text>
+            <picker mode="date" class="start-date" bindchange="changeStartDate">
+                <view class="picker">{{startDate}}</view>
+            </picker>
+            <picker mode="date" bindchange="changeEndDate">
+                <view class="picker">{{endDate}}</view>
+            </picker>
+        </view>
+        <!-- 配置 -->
+        <view class="facility">
+            <view class="title">配置设施</view>
+            <view class="list">
+                <view class="item {{item.active ? 'active': ''}}" wx:for="{{facilities}}" wx:key="index" bind:tap="onChooseFacTap" data-index="{{index}}">
+                    {{item.name}}
+                </view>
+            </view>
+        </view>
+        <!-- 发布按钮 -->
+        <view class="btn-area">
+            <button formType="submit">提交</button>
+        </view>
+    </form>
+</view>

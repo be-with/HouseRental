@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "h-nav": "/components/nav/cmp"
+
+  }
+}

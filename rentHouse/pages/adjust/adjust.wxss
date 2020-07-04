@@ -1,0 +1,36 @@
+/* pages/adjust/adjust.wxss */
+
+.container .h-name,
+.container .h-nickName,
+.container .h-houseName,
+.container .h-addr,
+.container .h-prevPrice,
+.container .h-addrdetail,
+.container .h-rentPrice,
+.container .h-area{ 
+    display: flex;
+    margin-top: 20rpx;
+    margin-left: 15rpx;
+    font-size: 30rpx;
+}
+.container .h-addr .picker{
+    margin-left: 54rpx;
+    font-size: 28rpx;
+}
+.container .line{
+    width: 100%;
+    height: 2rpx;
+    background-color: #fbfbfb;
+    margin: 25rpx 0rpx;
+
+}
+.container input{
+    margin-left: 25rpx;
+}
+.container .btn-area button{
+    margin-top: 60rpx;
+    color: #fff;
+    background-color: #47adbd;
+}
+
+

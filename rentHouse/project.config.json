@@ -1,0 +1,192 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.4",
+	"appid": "wxb7b01b286db528fd",
+	"projectname": "rentHouse",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 17,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/more/more",
+					"pathName": "pages/more/more",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/person/person",
+					"pathName": "pages/person/person",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/signing/signing",
+					"pathName": "pages/signing/signing",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/onlineSign/onlineSign",
+					"pathName": "pages/onlineSign/onlineSign",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "预订成功",
+					"pathName": "pages/reserve/reserve",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/person/person",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "业主出租",
+					"pathName": "pages/publish/publish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "认证业主",
+					"pathName": "pages/identity/identity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/houseSearch/houseSearch",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/houseSearch/houseSearch",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单",
+					"pathName": "pages/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单",
+					"pathName": "pages/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "看房申请",
+					"pathName": "pages/application/application",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "维修申请",
+					"pathName": "pages/maintain/maintain",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "报修",
+					"pathName": "pages/maintain/maintain",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "房源管理",
+					"pathName": "pages/houseManage/houseManage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布房源",
+					"pathName": "pages/publish/publish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "更多",
+					"pathName": "pages/more/more",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "看房行程",
+					"pathName": "pages/route/route",
+					"scene": null
+				}
+			]
+		}
+	}
+}

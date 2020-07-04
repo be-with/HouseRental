@@ -1,0 +1,104 @@
+/* pages/houseRecommendation/houseRecommendation.wxss */
+
+/* 搜索区域样式 */
+.search{
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: -2rpx;
+  height: 100rpx;
+  z-index: 999;
+  background-color: #fff;
+}
+.select-addr{
+  width: 185rpx;
+  display: flex;
+  margin-left: 23rpx;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #898888;
+  letter-spacing: 1rpx;
+}
+.select-addr image{
+  width:35rpx;
+  height: 35rpx;
+  margin-top: 5rpx;
+}
+.search .search-inp{
+  margin-left: 3rpx;
+}
+
+/* 轮播图样式 */
+.recommendation,
+.swiper{
+    height: 200px;
+    margin-top: 10px;
+}
+.recommendation .banner{
+    width: 710rpx;
+    height: 100%;
+}
+.recommendation .banner .slide-image{
+  width: 100%;
+}
+
+/* 导航条样式 */
+.navBar{
+    display: flex;
+    margin-top: 10rpx;
+    justify-content: space-around;
+}
+.navBar view{
+    display: flex;
+    flex-direction: column;
+    padding: 5rpx 30rpx;
+}
+.navBar image{
+    width: 70rpx;
+    height: 70rpx;
+    margin-left: 31rpx;
+}
+.navBar text{
+  font-size: 32rpx;
+}
+
+/* 房源推荐两行文字样式 */
+.recommend-tip{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10rpx;
+}
+.recommend-text1,
+.recommend-text2{
+    margin: 5rpx auto;
+}
+.recommend-tip .recommend-text1{
+    color: #41ADBD;
+    font-size: 40rpx;
+}
+.recommend-tip .recommend-text2{
+    color: #898888;
+    font-size: 28rpx;
+}
+/* 房源推荐菜单样式 */
+.recommend-menu{
+  display: flex;
+  border-top: 1px solid #C3C3C3;
+  padding: 15rpx;
+  justify-content: space-around;
+  margin-top: 5rpx;
+}
+.recommend-menu .menu{
+  border-right: 1px solid #c3c3c3;
+}
+.recommend-menu .menu:last-child{
+  border-right: none;
+}
+.recommend-menu text{
+  display: flex;
+  justify-content: center;
+  margin: 0 50rpx;
+  font-size: 30rpx;
+  padding: 5px;
+}

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "h-menu": "/components/menu/cmp"
+  }
+}

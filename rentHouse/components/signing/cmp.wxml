@@ -1,0 +1,63 @@
+<!-- components/signing/cmp.wxml -->
+<!-- <text>components/signing/cmp.wxml</text> -->
+<view class="container">
+    <!-- 轮播图 -->
+    <view class="swiper-box">
+        <swiper class="swiper" duration="{{duration}}" indicator-dots="{{indicatorDots}}" autoplay="{{true}}" indicator-active-color="#ffffff">
+            <block wx:for="{{swiperImg}}" wx:key='index'>
+                <swiper-item class="banner">
+                    <image src="{{item}}" class="slide-image" mode="widthFix" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- 房源信息 -->
+    <view class="info">
+        <view class="title">{{hasOrder == true ?  houseInfo.city + houseInfo.address + houseInfo.title : houseInfo.city + houseInfo.title}}</view>
+        <view class="telphone">中介联系电话：{{houseInfo.u_tel}}</view>
+        <view class="telphone" wx:if="{{hasOrder == true}}">业主联系电话：{{houseInfo.tel}}</view>
+        <!-- 短租的出租起止时间 -->
+        <view class="rent-time" wx:if="{{houseInfo.start_date !== null && houseInfo.start_date !== ''}}">出租起止时间：{{houseInfo.start_date}} -- {{ houseInfo.end_date}}</view>
+        <view class="house-info">
+            <view>
+                <text class="colorText">{{houseInfo.price}}</text>
+                <!-- <text class="simple">/{{houseInfo.rtype === '日租'? '天':'月'}}</text> -->
+                <text class="simple">/天</text>
+            </view>
+            <view>
+                <text class="colorText">{{houseInfo.type}}</text>
+                <text class="simple">户型</text>
+            </view>
+            <view>
+                <text class="colorText">{{houseInfo.area}}</text>
+                <text class="simple">面积(㎡)</text>
+            </view>
+        </view>
+        <!-- 分隔线 -->
+        <view class="line"></view>
+        <!-- 地图 -->
+        <view class="map">
+            <view class="title">地图</view>
+            <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" show-location style="width: 100%; height: 150px;"></map>
+        </view>
+        <!-- 分隔线 -->
+        <view class="line"></view>
+        <!-- 房源配置  allocation -->
+        <view class="allocation" catch:tap="onTap">
+            <text class="title">房源配置</text>
+            <view class="allocation-info">
+                <view wx:for="{{disopose}}" wx:key="index">
+                    <image src="{{item.img}}" />
+                    <text>{{item.text}}</text>
+                </view>
+            </view>
+        </view>
+        <!-- 分隔线 -->
+        <view class="line"></view>
+        <!-- 房源描述 -->
+        <view class="describe">
+            <text class="title">房源描述</text>
+            <view class="content">{{houseInfo.des}}</view>
+        </view>
+    </view>
+</view>

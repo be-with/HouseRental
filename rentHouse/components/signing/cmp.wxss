@@ -1,0 +1,110 @@
+/* components/signing/cmp.wxss */
+
+/* 轮播图样式 */
+.swiper-box,
+.swiper{
+    height: 200px;
+    margin-top: 10px;
+}
+.swiper-box .banner{
+    width: 710rpx;
+    height: 100%;
+}
+.swiper-box .banner .slide-image{
+  width: 100%;
+}
+
+/* 房源信息 */
+.info{
+  margin: 20rpx auto;
+  width: 98%;
+}
+.info .title{
+  font-size: 34rpx;
+}
+.info .rent-time,
+.info .telphone{
+  color: #686464;
+  font-size: 30rpx;
+  margin: 15rpx 0rpx;
+}
+
+.info .house-info{
+  display: flex;
+  margin-top: 5rpx;
+  justify-content: space-around;
+}
+.info .house-info view{
+  margin: 0 auto;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.info .house-info view .colorText{
+  color: rgb(23, 99, 146);
+  font-size: 32rpx;
+}
+.info .house-info view .simple{
+  color: #3c3c3c;
+  font-size: 28rpx;
+  margin: 0 auto;
+}
+.info .line{
+  width: 100%;
+  height: 2rpx;
+  background-color: #c3c3c3;
+  margin: 25rpx 0rpx;
+}
+.info .allocation{
+  width: 100%;
+  margin: 20rpx auto;
+}
+.info .allocation .title{
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.info .allocation .allocation-info{
+  width: 95%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.info .allocation .allocation-info view{
+  width: 85rpx;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15rpx;
+  padding: 10rpx 20rpx;
+  align-items: center;
+}
+.info .allocation .allocation-info image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.info .allocation .allocation-info text{
+  margin-top: 2rpx;
+  font-size: 25rpx;
+  color: #515151;
+}
+/* 地图 */
+.info .map .title{
+  font-size: 34rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+}
+/* 房源描述 */
+.info .describe{
+  margin: 20rpx auto;
+  width: 98%;
+}
+.info .describe .title{
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.info .describe .content{
+  width: 98%;
+  margin: 20rpx auto;
+  font-size: 28rpx;
+}
